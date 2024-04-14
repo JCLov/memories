@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let queryString = window.location.search
     if (queryString != "") {
-        validate(queryString.split('=')[1])
+        //validate(queryString.split('=')[1])
     }
 });
 
@@ -22,6 +22,7 @@ function enterCode(){
 
 
 function validate(code){
+    sessionStorage.setItem("code", code);
     switch (code) {
         case "2713":
             window.location.href = "album.html";
@@ -29,6 +30,7 @@ function validate(code){
             break;
     
         default:
+            sessionStorage.removeItem("code");
             return false;
             //window.location.href = "index.html";
             break;

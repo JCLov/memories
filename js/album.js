@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let code = sessionStorage.getItem("code");
+  if (code != "2713") {
+    window.location.href = "index.html";
+  }
+
   var fecha = new Date();
   var mensajeHeader = "Albúm de recuerditos";
   if (fecha.getDay() == 18 && fecha.getMonth() == 12) {
