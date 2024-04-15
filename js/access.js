@@ -7,9 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const inputAccess = document.getElementById("accessCode")
 inputAccess.addEventListener('input', enterCode);
-/*.addEventListener('input', function (evt) {
-    something(this.value);
-});*/
 function enterCode(){
     if (inputAccess.value.length == 4) {
         var response = validate(inputAccess.value)
