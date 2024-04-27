@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let queryString = window.location.search
     if (queryString != "") {
-        //validate(queryString.split('=')[1])
+        validate(queryString.split('=')[1])
     }
 });
 
